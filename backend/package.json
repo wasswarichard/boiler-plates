@@ -1,0 +1,35 @@
+{
+  "name": "nuribackend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js",
+    "create:tables": "node ./db/dbMigrations --create-data-tables",
+    "test": "mocha --recursive --exit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "atob": "^2.1.2",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "file-regex": "^3.1.0",
+    "node-fetch": "^2.6.1",
+    "pg": "^8.6.0",
+    "socket.io": "^4.0.1",
+    "underscore": "^1.13.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mockgoose": "^8.0.4",
+    "supertest": "^6.1.3",
+    "mocha": "^8.3.2",
+    "dotenv": "^8.2.0",
+    "make-runnable": "^1.3.8",
+    "nodemon": "^2.0.7"
+  }
+}
