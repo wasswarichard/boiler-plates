@@ -23,7 +23,6 @@ export function createAccessToken({user, session,}: { user: | Omit<UserDocument,
 export async function reIssueAccessToken({refreshToken,}: { refreshToken: string; }) {
     // Decode the refresh token
     const { decoded } = decode(refreshToken);
-
     if (!decoded || !get(decoded, "_id")) return false;
 
     // Get the session
@@ -33,12 +32,9 @@ export async function reIssueAccessToken({refreshToken,}: { refreshToken: string
     if (!session || !session?.valid) return false;
 
     const user = await findUser({ _id: session.user });
-
     if (!user) return false;
 
-    const accessToken = createAccessToken({ user, session });
-
-    return accessToken;
+    return createAccessToken({user, session});
 }
 
 export async function updateSession(query: FilterQuery<SessionDocument>, update: UpdateQuery<SessionDocument>) {
