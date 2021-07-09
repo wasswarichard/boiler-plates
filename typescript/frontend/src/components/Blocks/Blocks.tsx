@@ -2,7 +2,7 @@ import React from "react";
 
 const Blocks = () => {
     return (
-        <div>
+        <div className="main-content">
             Hello
         </div>
     )

@@ -18,7 +18,7 @@ function App() {
                             {routes.map((route) => (
                                 <Route
                                     path={route.path}
-                                    component={route.component}
+                                    component={Blocks}
                                     key={route.path}
                                 />
                             ))}

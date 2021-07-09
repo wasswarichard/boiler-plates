@@ -1,5 +1,5 @@
 import * as actions from "../actionTypes/actionTypes";
-export default function reducer(state = [], action) {
+export default function reducer(state = [], action: { type: string; payload: any; }) {
     switch (action.type) {
         case actions.BLOCKS_LOADED:
             const blocks = action.payload

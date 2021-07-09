@@ -19,4 +19,5 @@ const Layout =  ({children} : {children: any}) => {
     )
 }
 
+// @ts-ignore
 export default withRouter(Layout)
